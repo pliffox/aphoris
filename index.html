@@ -47,106 +47,12 @@
 
        
 
-        <div class="azioni">
-            
-            
-            <button
-    onclick="window.location.href='/regala/7';"
->
-    Regala
-</button>
-            <button onclick="apriCondivisione()">
-    Condividi
-</button>
-        </div>
+        
 
 
 </div>
 
 </section>
-
-<script>
-
-
-function condividiWhatsApp() {
-
-    const testo = document.querySelector(
-        "#finestra-condivisione textarea"
-    ).value;
-
-    const url = "https://wa.me/?text=" + encodeURIComponent(testo);
-
-    window.open(url, "_blank");
-}
-
-function condividiTelegram() {
-
-    const testo = document.querySelector(
-        "#finestra-condivisione textarea"
-    ).value;
-
-    window.open(
-        "https://t.me/share/url?text=" +
-        encodeURIComponent(testo),
-        "_blank"
-    );
-
-}
-
-function condividiFacebook() {
-
-    window.open(
-        "https://www.facebook.com/sharer/sharer.php?u=" +
-        encodeURIComponent(window.location.href),
-        "_blank"
-    );
-
-}
-
-function condividiX() {
-
-    const testo = document.querySelector(
-        "#finestra-condivisione textarea"
-    ).value;
-
-    window.open(
-        "https://twitter.com/intent/tweet?text=" +
-        encodeURIComponent(testo),
-        "_blank"
-    );
-
-}
-
-function condividiEmail() {
-
-    const testo = document.querySelector(
-        "#finestra-condivisione textarea"
-    ).value;
-
-    window.location =
-        "mailto:?subject=Una Perla di APHORIS&body=" +
-        encodeURIComponent(testo);
-
-}
-
-function apriCondivisione() {
-
-    document.getElementById(
-        "finestra-condivisione"
-    ).style.display = "block";
-
-}
-
-function chiudiCondivisione() {
-
-    document.getElementById(
-        "finestra-condivisione"
-    ).style.display = "none";
-
-}
-
-
-</script>
 
 
     </main>
