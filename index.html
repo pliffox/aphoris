@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>APHORIS</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    
+
+<header class="topbar">
+        <nav>
+    <a href="/pubblicazioni">Perle già pubblicate</a>
+    <a href="/entra">Entra in APHORIS</a>
+</nav>
+</header>
+
+
+    <main>
+        
+
+<section class="home">
+
+    <div class="logo-wrap">
+    <img class="logo" src="/static/img/logo.png" alt="APHORIS">
+    <a
+    class="admin-hotspot"
+    href="/admin"
+    onclick="return controllaAccesso(event)"
+    aria-label="Area riservata"
+></a>
+
+<a
+    class="perla-hotspot"
+    href="#"
+    onclick="forzaCambioPerla(event); return false;"
+    aria-label="Forza cambio perla"
+></a>
+
+</div>
+
+    <article
+    class="aforisma-card"
+    style="position:relative;"
+>
+
+
+
+        <p class="etichetta">
+    Aforisma del 28 giugno 2026
+</p>
+
+        <div style="position:relative;">
+
+    
+
+    <blockquote>
+        “Il giorno in cui il Signore creò la speranza fu probabilmente lo stesso giorno in cui creò la primavera”
+    </blockquote>
+
+</div>
+
+        <p class="autore">Bernard Williams</p>
+
+       
+
+        <div class="azioni">
+            
+            <button
+        id="btn-mi-piace"
+        onclick="aggiungiMiPiace(7)"
+            >
+        ♡ Mi piace (<span id="contatore-mi-piace">0</span>)
+            </button>
+            <button
+    onclick="window.location.href='/regala/7';"
+>
+    Regala
+</button>
+            <button onclick="apriCondivisione()">
+    Condividi
+</button>
+        </div>
+<div
+    id="messaggio-mi-piace"
+    style="
+        display:none;
+        position:absolute;
+        left:80px;
+        bottom:40px;
+        z-index:999;
+        pointer-events:none;
+    "
+>
+    <img
+        src="/static/img/emoji_grazie.png"
+        style="
+            width:300px;
+            height:auto;
+        "
+    >
+</div>
+
+    </article>
+
+<div
+    id="finestra-condivisione"
+    style="
+        display:none;
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,.45);
+        z-index:9999;
+    "
+>
+
+    <div
+        style="
+            width:520px;
+            max-width:92%;
+            background:#F5EFEB;
+            border-radius:18px;
+            padding:28px;
+            box-shadow:0 20px 60px rgba(0,0,0,.25);
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            color:#10296B;
+        "
+    >
+
+        <h2 style="margin-top:0;">
+            Condividi la Perla
+        </h2>
+
+        <textarea
+            style="
+                width:100%;
+                height:170px;
+                border-radius:12px;
+                padding:16px;
+                font-size:16px;
+            "
+        >“Il giorno in cui il Signore creò la speranza fu probabilmente lo stesso giorno in cui creò la primavera”
+
+— Bernard Williams
+
+Una Perla al giorno
+APHORIS</textarea>
+
+        <div
+            class="azioni"
+            style="margin-top:18px;"
+        >
+            <button onclick="condividiWhatsApp()">
+    WhatsApp
+</button>
+
+<button onclick="condividiTelegram()">
+    Telegram
+</button>
+
+<button onclick="condividiFacebook()">
+    Facebook
+</button>
+
+<button onclick="condividiX()">
+    X
+</button>
+
+<button onclick="condividiEmail()">
+    Email
+</button>
+
+<button onclick="chiudiCondivisione()">
+    Annulla
+</button>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<script>
+
+function forzaCambioPerla(event) {
+
+    if (!event.ctrlKey) {
+        return;
+    }
+
+    event.preventDefault();
+
+    fetch("/forza_perla", {
+        method: "POST"
+    }).then(function() {
+        window.location.reload();
+    });
+
+}
+
+function controllaAccesso(event) {
+
+    if (!event.ctrlKey) {
+
+        event.preventDefault();
+
+        return false;
+
+    }
+
+    return true;
+
+}
+
+function condividiWhatsApp() {
+
+    const testo = document.querySelector(
+        "#finestra-condivisione textarea"
+    ).value;
+
+    const url = "https://wa.me/?text=" + encodeURIComponent(testo);
+
+    window.open(url, "_blank");
+}
+
+function condividiTelegram() {
+
+    const testo = document.querySelector(
+        "#finestra-condivisione textarea"
+    ).value;
+
+    window.open(
+        "https://t.me/share/url?text=" +
+        encodeURIComponent(testo),
+        "_blank"
+    );
+
+}
+
+function condividiFacebook() {
+
+    window.open(
+        "https://www.facebook.com/sharer/sharer.php?u=" +
+        encodeURIComponent(window.location.href),
+        "_blank"
+    );
+
+}
+
+function condividiX() {
+
+    const testo = document.querySelector(
+        "#finestra-condivisione textarea"
+    ).value;
+
+    window.open(
+        "https://twitter.com/intent/tweet?text=" +
+        encodeURIComponent(testo),
+        "_blank"
+    );
+
+}
+
+function condividiEmail() {
+
+    const testo = document.querySelector(
+        "#finestra-condivisione textarea"
+    ).value;
+
+    window.location =
+        "mailto:?subject=Una Perla di APHORIS&body=" +
+        encodeURIComponent(testo);
+
+}
+
+function apriCondivisione() {
+
+    document.getElementById(
+        "finestra-condivisione"
+    ).style.display = "block";
+
+}
+
+function chiudiCondivisione() {
+
+    document.getElementById(
+        "finestra-condivisione"
+    ).style.display = "none";
+
+}
+
+async function aggiungiMiPiace(perlaId) {
+
+    const chiave = "aphoris_like_7";
+
+    if (localStorage.getItem(chiave)) {
+
+        const fumetto = document.getElementById(
+            "messaggio-mi-piace"
+        );
+
+        fumetto.style.display = "block";
+
+        setTimeout(function() {
+            fumetto.style.display = "none";
+        }, 3000);
+
+        return;
+    }
+
+    const risposta = await fetch(
+        "/mi_piace/" + perlaId,
+        {
+            method: "POST"
+        }
+    );
+
+    const dati = await risposta.json();
+
+    if (dati.success) {
+
+        localStorage.setItem(chiave, "1");
+
+        document.getElementById(
+            "contatore-mi-piace"
+        ).innerText = dati.mi_piace;
+
+    }
+}
+
+</script>
+
+
+
+    </main>
+
+</body>
+</html>
