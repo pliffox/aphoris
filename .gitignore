@@ -6,3 +6,5 @@ pubblica_homepage.bat
 installa_attivita_aphoris.bat
 struttura_progetto.txt
 pubblica_homepage funzionante 2.py
+pubblica_homepage*.py
+pubblica_homepage*.bat
