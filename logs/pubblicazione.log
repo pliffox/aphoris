@@ -11,3 +11,18 @@
 2026-06-28 22:10:25  Creo file di supporto per GitHub Pages.
 2026-06-28 22:10:25  Pubblico su GitHub da aphoris.
 2026-06-28 22:10:25  Eseguo: git add index.html static CNAME .nojekyll robots.txt sitemap.xml logs/pubblicazione.log
+2026-06-28 22:10:25  Eseguo: git commit -m Aggiorna landing APHORIS 2026-06-28 22:10
+2026-06-28 22:10:25  Eseguo: git push
+2026-06-28 22:10:46  ============================================================
+2026-06-28 22:10:46  Avvio pubblicazione APHORIS.
+2026-06-28 22:10:46  Flask era già attivo. Lo userò senza chiuderlo.
+2026-06-28 22:10:46  Attendo stabilità della homepage...
+2026-06-28 22:10:46  Homepage letta. Attendo conferma stabilità...
+2026-06-28 22:10:47  Homepage stabile: lettura 2/2
+2026-06-28 22:10:47  Homepage considerata stabile.
+2026-06-28 22:10:47  Converto HTML in landing statica.
+2026-06-28 22:10:47  Salvo index.html nella cartella aphoris.
+2026-06-28 22:10:47  Copio cartella static nella cartella aphoris.
+2026-06-28 22:10:47  Creo file di supporto per GitHub Pages.
+2026-06-28 22:10:47  Pubblico su GitHub da aphoris.
+2026-06-28 22:10:47  Eseguo: git add index.html static CNAME .nojekyll robots.txt sitemap.xml logs/pubblicazione.log
