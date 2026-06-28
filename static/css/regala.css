@@ -1,0 +1,292 @@
+:root{
+    --blu:#10296B;
+    --oro:#C8A05A;
+    --avorio:#F5EFEB;
+}
+
+body{
+    background:#050b24;
+}
+
+.regala-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+
+    background:
+        linear-gradient(rgba(3,8,28,.35), rgba(3,8,28,.50)),
+        url("../img/regala_background.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+.regala-box{
+
+    width:100%;
+    max-width:650px;
+
+    text-align:center;
+}
+
+.regala-titolo{
+
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:42px;
+    font-weight:400;
+
+    margin-bottom:28px;
+
+}
+
+.regala-testo{
+
+    font-size:17px;
+    line-height:1.8;
+
+    text-align:justify;
+
+}
+
+.regala-citazione{
+
+    margin:34px 0;
+
+    padding:24px 0;
+
+    border-top:1px solid rgba(200,160,90,.55);
+    border-bottom:1px solid rgba(200,160,90,.55);
+
+    font-style:italic;
+
+    font-size:24px;
+    text-align:center;
+
+    line-height:1.8;
+
+}
+
+.regala-domanda{
+
+    margin-top:34px;
+
+    font-size:18px;
+
+    letter-spacing:.5px;
+
+}
+
+.valori{
+
+    margin-top:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    gap:30px;
+
+}
+
+.valore{
+
+    cursor:pointer;
+
+    font-size:24px;
+
+    transition:.25s;
+}
+
+.valore:hover{
+
+    opacity:.85;
+
+}
+
+.valore-libero{
+
+    width:110px;
+
+    border:none;
+
+    border-bottom:1px solid var(--oro);
+
+    background:transparent;
+
+    color:var(--oro);
+
+    text-align:center;
+
+    font-size:22px;
+
+    outline:none;
+
+}
+
+.regala-conferma{
+
+    margin-top:38px;
+
+    background:transparent;
+
+    color:inherit;
+
+    border:none;
+
+    padding:0;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+.regala-home{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    text-decoration:none;
+
+    opacity:.90;
+
+    background:inherit;
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.regala-home:visited{
+
+    color:inherit;
+
+}
+
+.regala-home:hover{
+
+    opacity:1;
+
+}
+
+.regala-home:hover{
+
+    opacity:1;
+
+}
+
+
+.regala-box{
+    position:relative;
+    z-index:2;
+}
+
+.oro-gradiente{
+
+    background:linear-gradient(
+        110deg,
+        #6f4a17 0%,
+        #b8862f 18%,
+        #f3dc86 32%,
+        #fff7cf 40%,
+        #d7ad49 52%,
+        #8b5f20 66%,
+        #fff0a8 78%,
+        #b8862f 90%,
+        #6f4a17 100%
+    );
+
+    background-size:300% 100%;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    color:transparent;
+
+}
+
+
+.valore{
+
+    background:inherit;
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.dono-titolo-oro,
+.dono-firma-oro,
+.dono-conservala-oro,
+.dono-contatore-oro{
+    position:relative;
+    display:inline-block;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    background:linear-gradient(
+        115deg,
+        #5b3a0e 0%,
+        #9a6a1e 16%,
+        #d6a63a 31%,
+        #fff6c7 43%,
+        #c89127 56%,
+        #6f450f 70%,
+        #f7df88 83%,
+        #8f5f17 100%
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+    color:transparent;
+
+    text-shadow:
+        0 0 12px rgba(255,215,120,.18),
+        0 0 28px rgba(255,215,120,.08);
+}
+
+.dono-titolo-oro{
+    font-size:46px;
+    font-weight:400;
+    line-height:1.18;
+}
+
+.dono-firma-oro{
+    font-size:28px;
+    margin-top:26px;
+}
+
+.dono-conservala-oro{
+    font-size:32px;
+}
+
+.dono-contatore-oro{
+    font-size:18px;
+    margin-top:28px;
+}
