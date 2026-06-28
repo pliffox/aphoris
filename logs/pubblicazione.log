@@ -26,3 +26,9 @@
 2026-06-28 22:10:47  Creo file di supporto per GitHub Pages.
 2026-06-28 22:10:47  Pubblico su GitHub da aphoris.
 2026-06-28 22:10:47  Eseguo: git add index.html static CNAME .nojekyll robots.txt sitemap.xml logs/pubblicazione.log
+2026-06-28 22:10:47  Eseguo: git commit -m Aggiorna landing APHORIS 2026-06-28 22:10
+2026-06-28 22:10:47  Eseguo: git push
+2026-06-28 22:10:49  ERRORE: Command '['git', 'push']' returned non-zero exit status 1.
+2026-06-28 22:10:49  Flask era già attivo: non lo chiudo.
+2026-06-28 22:10:49  Fine.
+2026-06-28 22:10:49  ============================================================
