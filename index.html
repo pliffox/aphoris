@@ -4,23 +4,6 @@
     <meta charset="UTF-8">
     <title>APHORIS</title>
     <link rel="stylesheet" href="static/css/style.css">
-
-    <meta name="description" content="“Noi siamo stati creati per Dio: le persone che abbiamo amato su questa terra hanno risvegliato il nostro affetto solo in quanto avevano qualche elemento di somiglianza con Lui, manifestazione della sua bellezza, della sua tenera benevolenza, della sua saggezza e bontà. Non ci verrà chiesto di abbandonare quei visi così familiari per rivolgerci a uno sconosciuto. Quando vedremo il volto di Dio capiremo di averlo sempre conosciuto” — C.S. Lewis">
-    <link rel="canonical" href="https://aphoris.it/">
-    <link rel="icon" href="static/img/logo.png">
-
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="APHORIS">
-    <meta property="og:title" content="APHORIS">
-    <meta property="og:description" content="“Noi siamo stati creati per Dio: le persone che abbiamo amato su questa terra hanno risvegliato il nostro affetto solo in quanto avevano qualche elemento di somiglianza con Lui, manifestazione della sua bellezza, della sua tenera benevolenza, della sua saggezza e bontà. Non ci verrà chiesto di abbandonare quei visi così familiari per rivolgerci a uno sconosciuto. Quando vedremo il volto di Dio capiremo di averlo sempre conosciuto” — C.S. Lewis">
-    <meta property="og:url" content="https://aphoris.it/">
-    <meta property="og:image" content="https://aphoris.it/static/img/logo.png">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="APHORIS">
-    <meta name="twitter:description" content="“Noi siamo stati creati per Dio: le persone che abbiamo amato su questa terra hanno risvegliato il nostro affetto solo in quanto avevano qualche elemento di somiglianza con Lui, manifestazione della sua bellezza, della sua tenera benevolenza, della sua saggezza e bontà. Non ci verrà chiesto di abbandonare quei visi così familiari per rivolgerci a uno sconosciuto. Quando vedremo il volto di Dio capiremo di averlo sempre conosciuto” — C.S. Lewis">
-    <meta name="twitter:image" content="https://aphoris.it/static/img/logo.png">
-
 </head>
 
 <body>
@@ -64,20 +47,109 @@
 
        
 
-        
+        <div class="azioni">
+            
+            
+            <button
+    onclick="window.location.href='/regala/13';"
+>
+    Regala
+</button>
+            <button onclick="apriCondivisione()">
+    Condividi
+</button>
+        </div>
 
 
 </div>
 
 </section>
 
+<script>
 
-    
-<footer class="site-footer" style="text-align:center; margin:48px 0 24px; color:#6F6A62; font-size:12px; letter-spacing:1.4px;">
-    © APHORIS · <a href="https://aphoris.it" style="color:inherit; text-decoration:none;">aphoris.it</a>
-</footer>
 
-</main>
+function condividiWhatsApp() {
+
+    const testo = document.querySelector(
+        "#finestra-condivisione textarea"
+    ).value;
+
+    const url = "https://wa.me/?text=" + encodeURIComponent(testo);
+
+    window.open(url, "_blank");
+}
+
+function condividiTelegram() {
+
+    const testo = document.querySelector(
+        "#finestra-condivisione textarea"
+    ).value;
+
+    window.open(
+        "https://t.me/share/url?text=" +
+        encodeURIComponent(testo),
+        "_blank"
+    );
+
+}
+
+function condividiFacebook() {
+
+    window.open(
+        "https://www.facebook.com/sharer/sharer.php?u=" +
+        encodeURIComponent(window.location.href),
+        "_blank"
+    );
+
+}
+
+function condividiX() {
+
+    const testo = document.querySelector(
+        "#finestra-condivisione textarea"
+    ).value;
+
+    window.open(
+        "https://twitter.com/intent/tweet?text=" +
+        encodeURIComponent(testo),
+        "_blank"
+    );
+
+}
+
+function condividiEmail() {
+
+    const testo = document.querySelector(
+        "#finestra-condivisione textarea"
+    ).value;
+
+    window.location =
+        "mailto:?subject=Una Perla di APHORIS&body=" +
+        encodeURIComponent(testo);
+
+}
+
+function apriCondivisione() {
+
+    document.getElementById(
+        "finestra-condivisione"
+    ).style.display = "block";
+
+}
+
+function chiudiCondivisione() {
+
+    document.getElementById(
+        "finestra-condivisione"
+    ).style.display = "none";
+
+}
+
+
+</script>
+
+
+    </main>
 
 </body>
 </html>
