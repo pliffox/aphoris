@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <title>APHORIS</title>
     <link rel="stylesheet" href="static/css/style.css">
+
+    <meta name="description" content="“A tutti manca qualcosa per essere felici. Al tirchio i soldi e al superbo i consensi. Ma i peggiori sono gli invidiosi, a loro manca l’amore” — V. Cannova">
+    <link rel="canonical" href="https://aphoris.it/">
+    <link rel="icon" href="static/img/logo.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="APHORIS">
+    <meta property="og:title" content="APHORIS">
+    <meta property="og:description" content="“A tutti manca qualcosa per essere felici. Al tirchio i soldi e al superbo i consensi. Ma i peggiori sono gli invidiosi, a loro manca l’amore” — V. Cannova">
+    <meta property="og:url" content="https://aphoris.it/">
+    <meta property="og:image" content="https://aphoris.it/static/img/logo.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="APHORIS">
+    <meta name="twitter:description" content="“A tutti manca qualcosa per essere felici. Al tirchio i soldi e al superbo i consensi. Ma i peggiori sono gli invidiosi, a loro manca l’amore” — V. Cannova">
+    <meta name="twitter:image" content="https://aphoris.it/static/img/logo.png">
+
 </head>
 
 <body>
@@ -38,118 +55,29 @@
     
 
     <blockquote>
-        “Le cose più belle, quelle che ti daranno la felicità vera, arrivano in punta di piedi, in silenzio e attendono, pazienti, che tu le noti”
+        “A tutti manca qualcosa per essere felici. Al tirchio i soldi e al superbo i consensi. Ma i peggiori sono gli invidiosi, a loro manca l’amore”
     </blockquote>
 
 </div>
 
-        <p class="autore">A. Hepburn</p>
+        <p class="autore">V. Cannova</p>
 
        
 
-        <div class="azioni">
-            
-            
-            <button
-    onclick="window.location.href='/regala/16';"
->
-    Regala
-</button>
-            <button onclick="apriCondivisione()">
-    Condividi
-</button>
-        </div>
+        
 
 
 </div>
 
 </section>
 
-<script>
 
+    
+<footer class="site-footer" style="text-align:center; margin:48px 0 24px; color:#6F6A62; font-size:12px; letter-spacing:1.4px;">
+    © APHORIS · <a href="https://aphoris.it" style="color:inherit; text-decoration:none;">aphoris.it</a>
+</footer>
 
-function condividiWhatsApp() {
-
-    const testo = document.querySelector(
-        "#finestra-condivisione textarea"
-    ).value;
-
-    const url = "https://wa.me/?text=" + encodeURIComponent(testo);
-
-    window.open(url, "_blank");
-}
-
-function condividiTelegram() {
-
-    const testo = document.querySelector(
-        "#finestra-condivisione textarea"
-    ).value;
-
-    window.open(
-        "https://t.me/share/url?text=" +
-        encodeURIComponent(testo),
-        "_blank"
-    );
-
-}
-
-function condividiFacebook() {
-
-    window.open(
-        "https://www.facebook.com/sharer/sharer.php?u=" +
-        encodeURIComponent(window.location.href),
-        "_blank"
-    );
-
-}
-
-function condividiX() {
-
-    const testo = document.querySelector(
-        "#finestra-condivisione textarea"
-    ).value;
-
-    window.open(
-        "https://twitter.com/intent/tweet?text=" +
-        encodeURIComponent(testo),
-        "_blank"
-    );
-
-}
-
-function condividiEmail() {
-
-    const testo = document.querySelector(
-        "#finestra-condivisione textarea"
-    ).value;
-
-    window.location =
-        "mailto:?subject=Una Perla di APHORIS&body=" +
-        encodeURIComponent(testo);
-
-}
-
-function apriCondivisione() {
-
-    document.getElementById(
-        "finestra-condivisione"
-    ).style.display = "block";
-
-}
-
-function chiudiCondivisione() {
-
-    document.getElementById(
-        "finestra-condivisione"
-    ).style.display = "none";
-
-}
-
-
-</script>
-
-
-    </main>
+</main>
 
 </body>
 </html>
