@@ -120,30 +120,51 @@ blockquote {
 .logo-wrap {
     position: relative;
     display: inline-block;
+    width: min(320px, 92vw);
+}
+
+.logo-wrap .logo {
+    width: 100%;
+    max-width: none;
+}
+
+.logo-hit-area {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    pointer-events: none;
+    z-index: 12;
 }
 
 .admin-hotspot {
     position: absolute;
-    top: 38px;
-    left: 50%;
-    width: 70px;
-    height: 70px;
-    transform: translateX(-50%);
+    top: 35.66%;
+    left: 50.24%;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    border: 0;
     border-radius: 50%;
     background: transparent;
+    appearance: none;
     cursor: default;
-    z-index: 10;
+    pointer-events: auto;
 }
 
 .perla-hotspot {
     position: absolute;
-    top: 126px;
+    top: 58.45%;
     left: 50%;
-    width: 46px;
-    height: 46px;
-    transform: translateX(-50%);
+    width: 34px;
+    height: 34px;
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     background: transparent;
     cursor: default;
-    z-index: 11;
+    pointer-events: auto;
+    z-index: 20;
 }

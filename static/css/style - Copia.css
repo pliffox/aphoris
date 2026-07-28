@@ -134,3 +134,16 @@ blockquote {
     cursor: default;
     z-index: 10;
 }
+
+.perla-hotspot {
+    position: absolute;
+    top: 126px;
+    left: 50%;
+    width: 46px;
+    height: 46px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: transparent;
+    cursor: default;
+    z-index: 11;
+}

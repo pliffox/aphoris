@@ -25,9 +25,17 @@
             alt="APHORIS"
         >
 
-        
+        <div class="logo-hit-area">
+            <button
+                type="button"
+                class="admin-hotspot"
+                onclick="controllaAccesso(event)"
+                aria-label="Area riservata"
+                tabindex="-1"
+            ></button>
 
-        
+            
+        </div>
     </div>
 
     <article
@@ -38,16 +46,22 @@
         
 
         <p class="etichetta">
-            Aforisma del 27 luglio 2026
+            Aforisma del 28 luglio 2026
         </p>
 
-        <div style="position:relative;">
-            <blockquote>
-                “Chuang-tzu Con ordine, affronta il disordine; con calma, lirruenza. Questo significa avere il controllo del cuore.”
-            </blockquote>
-        </div>
+        <div
+            class="modifica-perla-hotspot"
+            onclick="apriModificaPerla(event)"
+            title=""
+        >
+            <div style="position:relative;">
+                <blockquote>
+                    “Aprendo gli occhi si impara più che aprendo la bocca”
+                </blockquote>
+            </div>
 
-        <p class="autore">Sun-tzu</p>
+            <p class="autore">Sconosciuto</p>
+        </div>
 
         
 
@@ -55,10 +69,8 @@
 
         <div class="azioni">
 
-            
-
             <button
-                onclick="window.location.href='/regala/31';"
+                onclick="window.location.href='/regala/39';"
             >
                 Regala
             </button>
@@ -75,6 +87,19 @@
 </section>
 
 <script>
+
+function apriModificaPerla(event) {
+
+    if (!event.ctrlKey) {
+        return;
+    }
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    window.location.href = "/admin/perla-del-giorno";
+
+}
 
 
 function condividiWhatsApp() {
@@ -153,7 +178,6 @@ function chiudiCondivisione() {
     ).style.display = "none";
 
 }
-
 
 </script>
 
