@@ -56,11 +56,11 @@
         >
             <div style="position:relative;">
                 <blockquote style="white-space:pre-line;text-align:center;">
-                    “Non identificarti con il lavoro che fai, identificati con il cuore che dai, con la passione che ci metti, con la gioia che trasmetti.”
+                    “Quel che c’è in me di misterioso, di sfuggente, di incomprensibile, lasciatemelo”
                 </blockquote>
             </div>
 
-            <p class="autore">Linda Velentinis</p>
+            <p class="autore">G. D’Annunzio</p>
         </div>
 
         
@@ -74,17 +74,32 @@
             >
                 Regala
             </button>
+</div>
 
-            <button onclick="apriCondivisione()">
-                Condividi
-            </button>
+        <div
+            id="messaggio-mi-piace"
+            style="
+                display:none;
+                position:absolute;
+                left:80px;
+                bottom:40px;
+                z-index:999;
+                pointer-events:none;
+            "
+        >
+            <img
+                src="static/img/emoji_grazie.png"
+                style="
+                    width:300px;
+                    height:auto;
+                "
+                alt=""
+            >
         </div>
 
-        
+    </article>
 
-    </div>
-
-</section>
+    </section>
 
 <script>
 
@@ -97,88 +112,10 @@ function apriModificaPerla(event) {
     event.preventDefault();
     event.stopPropagation();
 
-    window.location.href =
-        "http://127.0.0.1:5000/admin/perla-del-giorno";
+    window.location.href = "/admin/perla-del-giorno";
 
 }
 
-
-function condividiWhatsApp() {
-
-    const testo = document.querySelector(
-        "#finestra-condivisione textarea"
-    ).value;
-
-    const url = "https://wa.me/?text=" + encodeURIComponent(testo);
-
-    window.open(url, "_blank");
-}
-
-function condividiTelegram() {
-
-    const testo = document.querySelector(
-        "#finestra-condivisione textarea"
-    ).value;
-
-    window.open(
-        "https://t.me/share/url?text=" +
-        encodeURIComponent(testo),
-        "_blank"
-    );
-
-}
-
-function condividiFacebook() {
-
-    window.open(
-        "https://www.facebook.com/sharer/sharer.php?u=" +
-        encodeURIComponent(window.location.href),
-        "_blank"
-    );
-
-}
-
-function condividiX() {
-
-    const testo = document.querySelector(
-        "#finestra-condivisione textarea"
-    ).value;
-
-    window.open(
-        "https://twitter.com/intent/tweet?text=" +
-        encodeURIComponent(testo),
-        "_blank"
-    );
-
-}
-
-function condividiEmail() {
-
-    const testo = document.querySelector(
-        "#finestra-condivisione textarea"
-    ).value;
-
-    window.location =
-        "mailto:?subject=Una Perla di APHORIS&body=" +
-        encodeURIComponent(testo);
-
-}
-
-function apriCondivisione() {
-
-    document.getElementById(
-        "finestra-condivisione"
-    ).style.display = "block";
-
-}
-
-function chiudiCondivisione() {
-
-    document.getElementById(
-        "finestra-condivisione"
-    ).style.display = "none";
-
-}
 
 </script>
 
